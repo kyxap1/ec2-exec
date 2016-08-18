@@ -41,7 +41,7 @@ func main() {
 	sem := semaphore.New(n)
 
 	//auth, err := aws.EnvAuth()
-	auth, err := aws.GetAuth()
+	auth, err := aws.GetAuth("", "")
 	log.Check(err)
 
 	region, ok := aws.Regions[args["--region"].(string)]
